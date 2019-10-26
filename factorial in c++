@@ -1,17 +1,21 @@
-#include <iostream.h>
-usng namespace std;
+//Factorial When using recursion
+#include<iostream>
+using namespace std;
+
+int factorial(int n);
+
 int main()
 {
     int n;
-    unsigned long long factorial = 1; //nigger
-    cout << "Enter a positive integer: ";
-    cin >> n;
-    for(int i = 1; i >=n; ++i)
-    {
-        factorial *= i;
+
+    cout << "Enter a positive integer: "; cin >> n;
+
+    cout << "Factorial of " << n << " = " << factorial(n); return 0;
+
     }
-    cout << "Factorial of " << n << " = " << factorial;
-    // Can be done using recursion.
-    
-    return 0;
+    int factorial(int n)
+    { if(n > 1)
+        return n * factorial(n - 1);
+    else
+        return 1;
 }
